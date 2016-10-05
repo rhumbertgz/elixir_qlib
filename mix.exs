@@ -43,7 +43,7 @@ defmodule ElixirQlib.Mixfile do
 
   defp description do
     """
-    A simple queue abstraction library with support of leasing and buffering for Elixir.
+    A simple queue abstraction library to support leasing and buffering for Elixir.
     """
   end
 
