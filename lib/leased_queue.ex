@@ -3,11 +3,11 @@ defmodule QLib.LeasedQueue do
   LeasedQueue is a simple and leased abstraction around state.
 
   The items stored in a LeasedQueue have a limited lifetime. The LeasedQueue sets a
-  period time or lease time (by default 60 seconds) wich is used to automatically
+  period time or lease time (by default 60 seconds) which is used to automatically
   remove expired items.
 
-  An item expires if its time (procesing time) in the queue is greater than the leased
-  time setted in the queue. The procesing time is represents the time when the item was
+  An item expires if its time (processing time) in the queue is greater than the leased
+  time specified by the queue. The processing time is the time when the item was
   stored in the queue.
 
   A LeasedQueue guarantees that a pop-call never will return an expired item.

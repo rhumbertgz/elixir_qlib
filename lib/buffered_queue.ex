@@ -8,7 +8,7 @@ defmodule QLib.BufferedQueue do
   oldest item.
 
   The default capacity of BufferedQueue is 1000 items. The developers can set the
-  capacity value durinfg the creation of the collection.
+  capacity value during the creation of the collection.
 
   ## Examples
   {:ok, q} = BufferedQueue.new 5000
