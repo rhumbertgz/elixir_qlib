@@ -1,13 +1,24 @@
 defmodule ElixirQlib.Mixfile do
   use Mix.Project
 
+  @version "0.1.0"
+
   def project do
     [app: :elixir_qlib,
-     version: "0.1.0",
+     version: @version,
      elixir: "~> 1.3",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
-     deps: deps()]
+     deps: deps(),
+     # Hex
+     description: description(),
+     package: package(),
+
+     # Docs
+     name: "Elixir QLib",
+     docs: [source_ref: "v#{@version}", main: "Elixir QLib",
+            canonical: "http://hexdocs.pm/elixir_qlib",
+            source_url: "https://github.com/rhumbertgz/elixir_qlib"]]
   end
 
   # Configuration for the OTP application
@@ -28,5 +39,19 @@ defmodule ElixirQlib.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    """
+    A simple queue abstraction library with support of leasing and buffering for Elixir.
+    """
+  end
+
+  defp package do
+    [maintainers: ["Humberto Rodriguez Avila"],
+     licenses: ["Apache 2.0"],
+     links: %{"GitHub" => "https://github.com/rhumbertgz/elixir_qlib"},
+     files: ~w(mix.exs README.md CHANGELOG.md lib)
+    ]
   end
 end
