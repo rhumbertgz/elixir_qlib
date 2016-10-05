@@ -1,6 +1,6 @@
 # Elixir Queue Lib (Qlib)
 
-A simple queue abstraction library to support leasing and buffering for Elixir.
+A simple queue abstraction library to support leasing and buffering in Elixir.
 QLib provides two main queue abstractions LeasedQueue and BufferedQueue.
 
 ## LeasedQueue
