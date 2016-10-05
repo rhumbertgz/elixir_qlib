@@ -26,7 +26,7 @@ defmodule QLib.LeasedQueue do
   Creates a new empty LeasedQueue using the `lease` value as lease time.
 
   """
-  def new(lease \\ 10_000) do
+  def new(lease \\ 60_000) do
     GenServer.start_link(QLib.LeasedServer, lease)
   end
 
