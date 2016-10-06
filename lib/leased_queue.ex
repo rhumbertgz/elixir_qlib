@@ -13,12 +13,28 @@ defmodule QLib.LeasedQueue do
   A LeasedQueue guarantees that a pop-call never will return an expired item.
 
   ## Examples
-  {:ok, q} = LeasedQueue.new
-  LeasedQueue.push(q, 1)
-  LeasedQueue.pop(q)
-  LeasedQueue.size(q)
-  LeasedQueue.clear(q)
-  LeasedQueue.destroy(q)
+      iex(1)> {:ok, q} = QLib.LeasedQueue.new 5_000
+      {:ok, #PID<0.152.0>}
+      iex(2)> QLib.LeasedQueue.push(q, 1)
+      :ok
+      iex(3)> :timer.sleep(1_000)
+      :ok
+      iex(4)> QLib.LeasedQueue.push(q, 2)
+      :ok
+      iex(5)> :timer.sleep(4_000)
+      nil
+      iex(6)> QLib.LeasedQueue.size(q)
+      0
+      iex(7)> QLib.LeasedQueue.push q, 3
+      :ok
+      iex(8)> QLib.LeasedQueue.push q, 4
+      :ok
+      iex(9)> QLib.LeasedQueue.size(q)
+      1
+      iex(10)> QLib.LeasedQueue.size(q)
+      0
+      iex(11)> QLib.LeasedQueue.destroy(q)
+      :ok
 
   """
 

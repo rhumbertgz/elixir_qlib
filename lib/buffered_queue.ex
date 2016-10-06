@@ -11,12 +11,29 @@ defmodule QLib.BufferedQueue do
   capacity value during the creation of the collection.
 
   ## Examples
-  {:ok, q} = BufferedQueue.new 5000
-  BufferedQueue.push(q, 1)
-  BufferedQueue.pop(q)
-  BufferedQueue.size(q)
-  BufferedQueue.clear(q)
-  BufferedQueue.destroy(q)
+  
+      iex(1)> {:ok, q} = QLib.BufferedQueue.new 3
+      {:ok, #PID<0.140.0>}
+      iex(2)> QLib.BufferedQueue.push(q, 1)
+      :ok
+      iex(3)> QLib.BufferedQueue.push(q, 2)
+      :ok
+      iex(4)> QLib.BufferedQueue.push(q, 3)
+      :ok
+      iex(5)> QLib.BufferedQueue.push(q, 4)
+      :ok
+      iex(6)> QLib.BufferedQueue.size(q)
+      3
+      iex(7)> QLib.BufferedQueue.pop(q)
+      2
+      iex(8)> QLib.BufferedQueue.size(q)
+      2
+      iex(9)> QLib.BufferedQueue.clear(q)
+      :ok
+      iex(10)> QLib.BufferedQueue.size(q)
+      0
+      iex(11)> QLib.BufferedQueue.destroy(q)
+      :ok
 
   """
 
