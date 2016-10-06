@@ -1,7 +1,7 @@
 defmodule ElixirQlib.Mixfile do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "0.1.1"
 
   def project do
     [app: :elixir_qlib,
@@ -43,7 +43,7 @@ defmodule ElixirQlib.Mixfile do
 
   defp description do
     """
-    A simple queue abstraction library to support leasing and buffering for Elixir.
+    A simple queue abstraction library to support leasing and buffering in Elixir.
     """
   end
 
