@@ -18,9 +18,9 @@ defmodule ElixirQlib.Mixfile do
      name: "Elixir QLib",
      source_url: "https://github.com/rhumbertgz/elixir_qlib",
      docs: [source_ref: "v#{@version}",
-            canonical: "https://hexdocs.com/elixir_qlib",
-            main: "QLib.LeasedQueue",
-            extras: ["README.md"]]]
+            canonical: "https://hexdocs.com/elixir_qlib/",
+            main: ElixirQlib,
+            extras: ["README.md", "CONTRIBUTING.md"]]]
   end
 
   # Configuration for the OTP application
