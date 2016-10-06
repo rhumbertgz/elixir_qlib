@@ -18,7 +18,8 @@ defmodule ElixirQlib.Mixfile do
      name: "Elixir QLib",
      source_url: "https://github.com/rhumbertgz/elixir_qlib",
      docs: [source_ref: "v#{@version}",
-            canonical: "http://hexdocs.pm/elixir_qlib",
+            canonical: "https://hexdocs.com/elixir_qlib",
+            main: "QLib.LeasedQueue",
             extras: ["README.md"]]]
   end
 
