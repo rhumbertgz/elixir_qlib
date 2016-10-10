@@ -55,7 +55,7 @@ If [available in Hex](https://hex.pm/packages/elixir_qlib), the package can be i
 
     ```elixir
     def deps do
-      [{:elixir_qlib, "~> 0.1.0"}]
+      [{:elixir_qlib, "~> 0.1.1"}] 
     end
     ```
 
